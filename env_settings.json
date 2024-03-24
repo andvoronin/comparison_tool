@@ -1,0 +1,10 @@
+{
+    "qa": {
+        "server": "server name for qa environment",
+        "database": "db name for qa environment"
+    },
+    "prod": {
+        "server": "server name for prod environment",
+        "database": "db name for prod environment"
+    }
+}

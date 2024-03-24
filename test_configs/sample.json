@@ -1,0 +1,32 @@
+{
+    "source": {
+        "type": "flat_file",
+        "format": "csv",
+        "file_path": "C:\\Users\\path_to_extract\\file1.csv"
+    },
+    "target": {
+        "type": "sql_query",
+        "environment": "prod_val",
+        "file_path": "C:\\Users\\path_to_folder_with query\\query1.sql"
+    },
+    "column_mapping": [
+        {
+            "source_name": "Origin Supply Area",
+            "target_name": "Origin Supply Area",
+            "key": true
+        },
+        {
+            "source_name": "usd_amount",
+            "target_name": "amount",
+            "key": false,
+            "comparison": "numeric",
+            "clean": "both",
+            "replace_nulls": "both",
+            "negative_format": {
+                "type": "parentheses",
+                "value": "both"
+            },
+            "precision": 3
+        }
+    ]
+}
